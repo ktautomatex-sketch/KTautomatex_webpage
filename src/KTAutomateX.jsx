@@ -631,7 +631,7 @@ const process = [
 export default function KTAutomateX() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", business: "", source: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", business: "", website: "", source: "", message: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -1111,10 +1111,15 @@ export default function KTAutomateX() {
                       <input className="form-input" type="email" placeholder="you@company.com" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
                     </div>
                   </div>
-                  <div className="form-group">
-                    <label className="form-label">Business Type *</label>
-                    <input className="form-input" placeholder="e.g. Real Estate, E-commerce, Coaching..." required value={form.business} onChange={e => setForm({...form, business: e.target.value})} />
-                  </div>
+                  <div className="form-row">
+  <div className="form-group">
+    <label className="form-label">Business Type *</label>
+    <input className="form-input" placeholder="e.g. Real Estate, E-commerce..." required value={form.business} onChange={e => setForm({...form, business: e.target.value})} />
+  </div>
+  <div className="form-group">
+    <label className="form-label">Business Website</label>
+    <input className="form-input" type="url" placeholder="https://yourwebsite.com" value={form.website} onChange={e => setForm({...form, website: e.target.value})} />
+  </div>
                   <div className="form-group">
                     <label className="form-label">Where Do Your Leads Come From?</label>
                     <select className="form-select" value={form.source} onChange={e => setForm({...form, source: e.target.value})}>
