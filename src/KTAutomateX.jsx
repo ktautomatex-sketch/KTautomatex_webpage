@@ -631,7 +631,7 @@ const process = [
 export default function KTAutomateX() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", business: "", website: "", source: "", message: "", message: "" });
+ const [form, setForm] = useState({ name: "", email: "", business: "", website: "", source: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -1120,6 +1120,9 @@ export default function KTAutomateX() {
     <label className="form-label">Business Website</label>
     <input className="form-input" type="url" placeholder="https://yourwebsite.com" value={form.website} onChange={e => setForm({...form, website: e.target.value})} />
   </div>
+</div>
+                  <div className="form-group">
+                    <label className="form-label">Where Do Your Leads Come From?</label>
                   <div className="form-group">
                     <label className="form-label">Where Do Your Leads Come From?</label>
                     <select className="form-select" value={form.source} onChange={e => setForm({...form, source: e.target.value})}>
