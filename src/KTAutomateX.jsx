@@ -1123,8 +1123,6 @@ export default function KTAutomateX() {
 </div>
                   <div className="form-group">
                     <label className="form-label">Where Do Your Leads Come From?</label>
-                  <div className="form-group">
-                    <label className="form-label">Where Do Your Leads Come From?</label>
                     <select className="form-select" value={form.source} onChange={e => setForm({...form, source: e.target.value})}>
                       <option value="">Select platform...</option>
                       <option value="facebook">Facebook Ads</option>
